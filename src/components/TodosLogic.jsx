@@ -1,6 +1,6 @@
-import InputTodo from "./InputTodo";
-import TodosList from "./TodosList";
-import { useState } from "react";
+import { useState } from 'react';
+import InputTodo from './InputTodo';
+import TodosList from './TodosList';
 
 const TodosLogic = () => {
   const [todos, setTodos] = useState([
@@ -23,9 +23,9 @@ const TodosLogic = () => {
 
   return (
     <div>
-    <InputTodo/>
-    <TodosList todosProps={todos} setTodos={setTodos} />
+      <InputTodo />
+      <TodosList todosProps={todos} setTodos={setTodos} />
     </div>
-  )
-}
+  );
+};
 export default TodosLogic;

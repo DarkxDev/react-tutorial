@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from 'react';
 
 const Navbar = () => {
   const [dropdown, setDropdown] = useState(false);
@@ -10,7 +10,7 @@ const Navbar = () => {
         setDropdown(false);
       }
     };
-    document.addEventListener("mousedown", handler);
+    document.addEventListener('mousedown', handler);
   }, [dropdown]);
 
   return (
@@ -19,8 +19,10 @@ const Navbar = () => {
         <li>Home</li>
         <li>About</li>
         <li ref={ref}>
-          <button onClick={() => setDropdown((prev) => !prev)}>
-            Services <span>&#8595;</span>
+          <button type="button" onClick={() => setDropdown((prev) => !prev)}>
+            Services
+            {' '}
+            <span>&#8595;</span>
           </button>
           {dropdown && (
             <ul>
